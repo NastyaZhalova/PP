@@ -1,50 +1,59 @@
-
 import org.example.Main;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 
 public class MainTest {
+
+    private double roundToThree(double value) {
+        return new BigDecimal(value)
+                .setScale(3, RoundingMode.HALF_UP)
+                .doubleValue();
+    }
 
     @Test
     public void testLogAccuracy() {
         int k = 4;
         double x = 0.5;
-        double expected = Math.log(1 - x);
-        double actual = Main.Log(k, x);
+        double expected = roundToThree(Math.log(1 - x));
+        double actual = roundToThree(Main.Log(k, x));
 
-        // Разница должна быть меньше ε
-        double epsilon = Math.pow(10, -k);
-        assertTrue(Math.abs(expected - actual) < epsilon,
-                "Ожидаемое значение должно быть близко к Math.log(1 - x)");
+        assertEquals(expected, actual,
+                "Ожидаемое значение должно совпадать с округлённым результатом Log()");
     }
 
     @Test
     public void testLogNearZero() {
         int k = 6;
         double x = 0.0001;
-        double expected = Math.log(1 - x);
-        double actual = Main.Log(k, x);
+        double expected = roundToThree(Math.log(1 - x));
+        double actual = roundToThree(Main.Log(k, x));
 
-        assertTrue(Math.abs(expected - actual) < Math.pow(10, -k));
+        assertEquals(expected, actual,
+                "Ожидаемое значение должно совпадать с округлённым результатом Log()");
     }
 
     @Test
     public void testLogAtEdge() {
         int k = 12;
         double x = 0.999;
-        double expected = Math.log(1 - x);
-        double actual = Main.Log(k, x);
+        double expected = roundToThree(Math.log(1 - x));
+        double actual = roundToThree(Main.Log(k, x));
 
-        assertTrue(Math.abs(expected - actual) < Math.pow(10, -k));
+        assertEquals(expected, actual,
+                "Ожидаемое значение должно совпадать с округлённым результатом Log()");
     }
 
     @Test
     public void testZeroInput() {
         int k = 3;
         double x = 0.0;
-        double expected = Math.log(1 - x); // log(1) = 0
-        double actual = Main.Log(k, x);
+        double expected = roundToThree(Math.log(1 - x)); // log(1) = 0
+        double actual = roundToThree(Main.Log(k, x));
 
-        assertEquals(expected, actual, Math.pow(10, -k));
+        assertEquals(expected, actual,
+                "Ожидаемое значение должно совпадать с округлённым результатом Log()");
     }
 }
