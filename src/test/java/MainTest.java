@@ -2,17 +2,9 @@ import org.example.LogCalculator;
 import org.example.Main;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 
 
 public class MainTest {
-
-//    private double roundToThree(double value) {
-//        return new BigDecimal(value)
-//                .setScale(3, RoundingMode.HALF_UP)
-//                .doubleValue();
-//    }
 
     @Test
     public void testLogAccuracy() {
