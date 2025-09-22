@@ -17,6 +17,9 @@ public class StringClass {
 
         if (fullLine.length() <= k) {
             firstPart = fullLine;
+            while (firstPart.length() < k) {
+                firstPart += " ";
+            }
             secondPart = "";
         } else {
             int splitIndex = k;

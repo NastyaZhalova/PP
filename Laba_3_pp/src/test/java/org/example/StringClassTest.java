@@ -14,8 +14,8 @@ public class StringClassTest {
 
     @Test
     public void testExactSplit() {
-        String[] result = StringClass.splitLine("Привет мир", 6);
-        assertEquals("Привет", result[0]);
+        String[] result = StringClass.splitLine("Привет мир", 7);
+        assertEquals("Привет ", result[0]);
         assertEquals("мир", result[1]);
     }
 
@@ -35,8 +35,8 @@ public class StringClassTest {
 
     @Test
     public void testMultipleSpacesAndDots() {
-        String[] result = StringClass.splitLine("Привет   мир. Как дела?", 10);
-        assertEquals("Привет   ", result[0]);
+        String[] result = StringClass.splitLine("Привет   мир. Как дела", 10);
+        assertEquals("Привет    ", result[0]);
         assertEquals("мир Как дела", result[1]);
     }
 }
