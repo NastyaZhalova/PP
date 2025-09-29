@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Введите слова через пробел:");
+        System.out.println("Введите слова:");
         String input = scanner.nextLine();
 
         List<String> words = new ArrayList<>(Arrays.asList(input.split("[\\s,\\.]+")));

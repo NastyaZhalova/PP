@@ -25,7 +25,8 @@ public class TextClass {
         boolean extended = false;
         for (String next : words) {
             if (!visited.contains(next) &&
-                    current.charAt(current.length() - 1) == next.charAt(0)) {
+                    Character.toLowerCase(current.charAt(current.length() - 1)) ==
+                            Character.toLowerCase(next.charAt(0))) {
                 rec(next, words, visited, currentChain, maxChain);
                 extended = true;
             }
