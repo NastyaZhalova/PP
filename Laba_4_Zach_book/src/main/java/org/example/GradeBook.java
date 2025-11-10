@@ -1,8 +1,11 @@
 package org.example;
 
-import java.io.*;
-import java.util.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.*;
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class GradeBook {
     private String lastName;
     private String firstName;
@@ -11,16 +14,18 @@ public class GradeBook {
     private String group;
     private List<SessionRecord> sessions = new ArrayList<>();
 
-    public GradeBook(String lastName, String firstName, String middleName, int course, String group) {
+    @JsonCreator
+    public GradeBook(
+            @JsonProperty("lastName") String lastName,
+            @JsonProperty("firstName") String firstName,
+            @JsonProperty("middleName") String middleName,
+            @JsonProperty("course") int course,
+            @JsonProperty("group") String group) {
         this.lastName = lastName;
         this.firstName = firstName;
         this.middleName = middleName;
         this.course = course;
         this.group = group;
-    }
-
-    public void addSession(SessionRecord session) {
-        sessions.add(session);
     }
 
     public boolean isExcellent() {
@@ -30,20 +35,21 @@ public class GradeBook {
         return true;
     }
 
-    public List<SessionRecord> getSessions() {
-        return sessions;
-    }
+    public String getLastName() { return lastName; }
+    public String getFirstName() { return firstName; }
+    public String getMiddleName() { return middleName; }
+    public int getCourse() { return course; }
+    public String getGroup() { return group; }
+    public List<SessionRecord> getSessions() { return sessions; }
 
-    public String getStudentInfo() {
-        return lastName + " " + firstName + " " + middleName + ", курс " + course + ", группа " + group;
-    }
-
-    public class SessionRecord {
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    public static class SessionRecord {
         private int sessionNumber;
         private Map<String, Integer> exams = new HashMap<>();
         private List<String> passedCredits = new ArrayList<>();
 
-        public SessionRecord(int sessionNumber) {
+        @JsonCreator
+        public SessionRecord(@JsonProperty("sessionNumber") int sessionNumber) {
             this.sessionNumber = sessionNumber;
         }
 
@@ -62,16 +68,8 @@ public class GradeBook {
             return true;
         }
 
-        public boolean allCreditsPassed() {
-            return !passedCredits.isEmpty(); // можно усложнить при необходимости
-        }
-
-        public int getSessionNumber() {
-            return sessionNumber;
-        }
-
-        public Map<String, Integer> getExams() {
-            return exams;
-        }
+        public int getSessionNumber() { return sessionNumber; }
+        public Map<String, Integer> getExams() { return exams; }
+        public List<String> getPassedCredits() { return passedCredits; }
     }
 }

@@ -1,0 +1,33 @@
+[ {
+  "lastName" : "Иванов",
+  "firstName" : "Иван",
+  "middleName" : "Иванович",
+  "course" : 2,
+  "group" : "ИТ-21",
+  "sessions" : [ {
+    "sessionNumber" : 1,
+    "exams" : {
+      "Физика" : 9,
+      "Математика" : 10
+    },
+    "passedCredits" : [ "История", "Физкультура" ],
+    "excellent" : true
+  } ],
+  "excellent" : true
+}, {
+  "lastName" : "Петров",
+  "firstName" : "Петр",
+  "middleName" : "Петрович",
+  "course" : 3,
+  "group" : "ИТ-22",
+  "sessions" : [ {
+    "sessionNumber" : 2,
+    "exams" : {
+      "Физика" : 9,
+      "Математика" : 8
+    },
+    "passedCredits" : [ "История" ],
+    "excellent" : false
+  } ],
+  "excellent" : false
+} ]
