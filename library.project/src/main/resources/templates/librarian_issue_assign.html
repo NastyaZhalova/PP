@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<h3>Выдать книгу читателю</h3>
+<form method="post" action="/librarian/issue-assign">
+    <input name="username" placeholder="Логин читателя" required><br>
+    <input name="bookId" placeholder="ID книги" type="number" required><br>
+    <button type="submit">Выдать</button>
+</form>
+<div style="color:green;" th:text="${message}"></div>
+<div style="color:red;" th:text="${error}"></div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<h3>Мой аккаунт: <span th:text="${username}"></span></h3>
+<table border="1">
+    <tr><th>Book ID</th><th>Timestamp</th></tr>
+    <tr th:each="i : ${issued}">
+        <td th:text="${i.bookId}"></td>
+        <td th:text="${i.ts}"></td>
+    </tr>
+</table>
+<a href="/reader/menu">Назад</a>
+</body>
+</html>

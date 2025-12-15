@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<accounts>
+    <!-- Пример записи о выдаче книги -->
+    <issue username="reader1" bookId="1" ts="2025-12-13T10:00:00Z"/>
+</accounts>

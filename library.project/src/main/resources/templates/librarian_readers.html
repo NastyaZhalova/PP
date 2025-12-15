@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<h3>Список читателей</h3>
+<ul>
+    <li th:each="u : ${readers}" th:text="${u}"></li>
+</ul>
+<a href="/librarian/menu">Назад</a>
+</body>
+</html>

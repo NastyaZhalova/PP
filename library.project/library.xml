@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+    <book id="1" copies="3" available="3">
+        <title>Преступление и наказание</title>
+        <author>Ф.М. Достоевский</author>
+        <year>1866</year>
+        <price>500.00</price>
+        <category>Роман</category>
+    </book>
+    <book id="2" copies="2" available="2">
+        <title>Война и мир</title>
+        <author>Л.Н. Толстой</author>
+        <year>1869</year>
+        <price>750.00</price>
+        <category>Эпос</category>
+    </book>
+    <book id="3" copies="4" available="4">
+        <title>Мастер и Маргарита</title>
+        <author>М.А. Булгаков</author>
+        <year>1967</year>
+        <price>600.00</price>
+        <category>Роман</category>
+    </book>
+    <book id="4" copies="5" available="5">
+        <title>Анна Каренина</title>
+        <author>Л.Н. Толстой</author>
+        <year>1877</year>
+        <price>550.00</price>
+        <category>Роман</category>
+    </book>
+    <book id="5" copies="3" available="3">
+        <title>Идиот</title>
+        <author>Ф.М. Достоевский</author>
+        <year>1869</year>
+        <price>480.00</price>
+        <category>Роман</category>
+    </book>
+    <book id="6" copies="2" available="2">
+        <title>Отцы и дети</title>
+        <author>И.С. Тургенев</author>
+        <year>1862</year>
+        <price>400.00</price>
+        <category>Роман</category>
+    </book>
+    <book id="7" copies="3" available="3">
+        <title>Доктор Живаго</title>
+        <author>Б.Л. Пастернак</author>
+        <year>1957</year>
+        <price>520.00</price>
+        <category>Роман</category>
+    </book>
+    <book id="8" copies="2" available="2">
+        <title>Тихий Дон</title>
+        <author>М.А. Шолохов</author>
+        <year>1940</year>
+        <price>580.00</price>
+        <category>Эпос</category>
+    </book>
+    <book id="9" copies="3" available="3">
+        <title>Евгений Онегин</title>
+        <author>А.С. Пушкин</author>
+        <year>1833</year>
+        <price>450.00</price>
+        <category>Поэма</category>
+    </book>
+    <book id="10" copies="4" available="4">
+        <title>Мёртвые души</title>
+        <author>Н.В. Гоголь</author>
+        <year>1842</year>
+        <price>470.00</price>
+        <category>Роман</category>
+    </book>
+    <book id="11" copies="2" available="2">
+        <title>Белая гвардия</title>
+        <author>М.А. Булгаков</author>
+        <year>1925</year>
+        <price>430.00</price>
+        <category>Роман</category>
+    </book>
+    <book id="12" copies="3" available="3">
+        <title>Обломов</title>
+        <author>И.А. Гончаров</author>
+        <year>1859</year>
+        <price>460.00</price>
+        <category>Роман</category>
+    </book>
+    <book id="13" copies="2" available="2">
+        <title>Двенадцать стульев</title>
+        <author>Ильф и Петров</author>
+        <year>1928</year>
+        <price>390.00</price>
+        <category>Сатира</category>
+    </book>
+    <book id="14" copies="3" available="3">
+        <title>Золотой телёнок</title>
+        <author>Ильф и Петров</author>
+        <year>1931</year>
+        <price>410.00</price>
+        <category>Сатира</category>
+    </book>
+    <book id="15" copies="2" available="2">
+        <title>Человек-амфибия</title>
+        <author>А.Р. Беляев</author>
+        <year>1928</year>
+        <price>370.00</price>
+        <category>Фантастика</category>
+    </book>
+</library>

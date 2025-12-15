@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<h3>Поиск книги</h3>
+<form method="get" action="/reader/search/run">
+    <select name="type">
+        <option value="author">Автор</option>
+        <option value="year">Год</option>
+        <option value="category">Категория</option>
+    </select>
+    <input name="value" placeholder="значение" required>
+    <button type="submit">Искать</button>
+</form>
+</body>
+</html>
